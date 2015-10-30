@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="This is simple HTML CSS JS test" http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WebToMed website developer test</title>
+    <style>
+        /* Add all CSS enteries here */
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            position: relative;
+            border: 2px solid black;
+
+        }
+        #div_1{
+            width:300px;
+            height:50px;
+            background-color: red;
+            float:left;
+            text-align: left;
+            position: absolute;
+        }
+        #div_2
+        {
+
+            height:50px;
+            background-color: green;
+            margin: 0 100px;
+            text-align: center;
+
+        }
+        #div_3{
+            width:350px;
+            height:50px;
+            background-color:blue;
+            position: absolute;
+            right: 0; top: 0;
+            color:white;
+            text-decoration:underline;
+            font-weight: bold;
+            text-align: right;
+        }
+        #div_4{
+            height:300px;
+            background-color: yellow;
+        }
+        #div_5
+        {
+            text-align: center;
+        }
+        #div_6
+        {
+            border:3px black solid;
+            margin-top:10px;
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        /* Add any JavaScript here */
+
+
+        function changeColor(el,x) {
+            var e = document.getElementById(el);
+            var strSel = "The Value is: " + e.options[e.selectedIndex].value + " and text is: " + e.options[e.selectedIndex].text;
+            var c = document.getElementById(x);
+            var strSel1 = "The Value is: " + c.options[c.selectedIndex].value + " and text is: " + c.options[c.selectedIndex].text;
+            console.log(strSel);
+            console.log(strSel1);
+            if (e.options[e.selectedIndex].value == "div_1") {
+                if (c.options[c.selectedIndex].value == "#333333") {
+                    console.log("true");
+                    div_1.style.border = "10px solid #333333";
+                }
+                else if (c.options[c.selectedIndex].value == "#777777") {
+                    console.log("Very true");
+                    div_1.style.border = "10px solid #777777";
+                }
+                else if (c.options[c.selectedIndex].value == "#CCCCCC") {
+                    console.log("Very very true");
+                    div_1.style.border = "10px solid #CCCCCC";
+                }
+
+
+            }
+
+
+            if (e.options[e.selectedIndex].value == "div_2") {
+                if (c.options[c.selectedIndex].value == "#333333") {
+                    console.log("super");
+                    div_2.style.border = "10px solid #333333";
+                }
+                else if (c.options[c.selectedIndex].value == "#777777") {
+                    console.log("Very super");
+                    div_2.style.border = "10px solid #777777";
+                }
+                else if (c.options[c.selectedIndex].value == "#CCCCCC") {
+                    console.log("Very very super");
+                    div_2.style.border = "10px solid #CCCCCC";
+                }
+
+
+            }
+
+            if (e.options[e.selectedIndex].value == "div_3") {
+                if (c.options[c.selectedIndex].value == "#333333") {
+                    console.log("true");
+                    div_3.style.border = "10px solid #333333";
+                }
+                else if (c.options[c.selectedIndex].value == "#777777") {
+                    console.log("Very true");
+                    div_3.style.border = "10px solid #777777";
+                }
+                else if (c.options[c.selectedIndex].value == "#CCCCCC") {
+                    console.log("Very very true");
+                    div_3.style.border = "10px solid #CCCCCC";
+                }
+
+
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+
+<!-- Modify this block of divs - START -->
+
+    <div class="container">
+       <div id="div_1">LEFT COL STATIC WIDTH 300px</div>
+
+       <div id="div_2">CENTER COL DYNAMIC WIDTH</div>
+       <div id="div_3">RIGHT COL STATIC WIDTH 350px</div>
+   </div>
+
+
+<div id="div_4">
+    <div id="div_5">
+        This text should be centered horizontally and vertically.
+    </div>
+</div>
+<div id="div_6">
+    Div Selector:
+    <select id="mySelect">
+        <option value="div_1">Div1</option>
+        <option value="div_2">Div2</option>
+        <option value="div_3">Div3</option>
+    </select>
+
+
+    <!-- Place Div Select Here -->
+
+    <br /><br />
+    Color Selector:
+    <!-- Place Color Select Here -->
+    <select id="myColor">
+        <option value="#333333">gray1</option>
+        <option value="#777777">gray2</option>
+        <option value="#CCCCCC">gray3</option>
+    </select>
+    <!-- Place "Change Color" Button Here -->
+    <button onclick="changeColor('mySelect','myColor')">Change Color</button>
+</div>
+<!-- Modify this block of divs - END -->
+
+
+
+</body>
+</html>
